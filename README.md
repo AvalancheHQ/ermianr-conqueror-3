@@ -1,5 +1,7 @@
 # conqueror
 
+[![CodSpeed](https://img.shields.io/endpoint?url=https://codspeed.io/badge.json?org=AvalancheHQ&repo=ermianr-conqueror-3&utm_source=badge)](https://codspeed.io/AvalancheHQ/ermianr-conqueror-3?utm_source=badge)
+
 This project was created with [Better-T-Stack](https://github.com/AmanVarshney01/create-better-t-stack), a modern TypeScript stack that combines React, TanStack Start, Self, and more.
 
 ## Features
