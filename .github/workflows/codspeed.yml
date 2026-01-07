@@ -1,0 +1,31 @@
+name: CodSpeed
+'on':
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+  workflow_dispatch: null
+permissions:
+  contents: read
+  id-token: write
+jobs:
+  benchmarks:
+    name: Run benchmarks
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v6
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+    - name: Install dependencies
+      run: npm install
+    - name: Run benchmarks
+      uses: CodSpeedHQ/action@v4.5.2
+      with:
+        upload-url: ${{ secrets.CODSPEED_FRANCOIS_DEV_UPLOAD_URL }}
+        mode: simulation
+        run: npm run bench
