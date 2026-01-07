@@ -1,5 +1,7 @@
 # conqueror
 
+[![CodSpeed](https://img.shields.io/endpoint?url=https://codspeed.io/badge.json)](https://codspeed.io/AvalancheHQ/ermianr-conqueror-3?utm_source=badge)
+
 This project was created with [Better-T-Stack](https://github.com/AmanVarshney01/create-better-t-stack), a modern TypeScript stack that combines React, TanStack Start, Self, and more.
 
 ## Features
@@ -13,6 +15,7 @@ This project was created with [Better-T-Stack](https://github.com/AmanVarshney01
 - **Biome** - Linting and formatting
 - **Husky** - Git hooks for code quality
 - **Starlight** - Documentation site with Astro
+- **CodSpeed** - Continuous performance benchmarking
 
 ## Getting Started
 
@@ -57,6 +60,7 @@ conqueror/
 │   ├── docs/        # Documentation site (Astro Starlight)
 ├── packages/
 │   ├── api/         # API layer / business logic
+├── benchmarks/      # Performance benchmarks
 ```
 
 ## Available Scripts
@@ -64,6 +68,7 @@ conqueror/
 - `bun run dev`: Start all applications in development mode
 - `bun run build`: Build all applications
 - `bun run check-types`: Check TypeScript types across all apps
+- `bun run bench`: Run performance benchmarks locally
 - `bun run db:push`: Push schema changes to database
 - `bun run db:studio`: Open database studio UI
 - `bun run db:generate`: Generate database migrations
@@ -73,3 +78,17 @@ conqueror/
 - `cd apps/docs && bun run build`: Build documentation site
 - `docker-compose up -d`: Start PostgreSQL database
 - `docker-compose down`: Stop PostgreSQL database
+
+## Performance Benchmarking
+
+This project uses [CodSpeed](https://codspeed.io) for continuous performance monitoring. Benchmarks are automatically run on every pull request to detect performance regressions.
+
+### Running Benchmarks Locally
+
+```bash
+bun run bench
+```
+
+### Writing Benchmarks
+
+Create benchmark files in the `benchmarks/` directory with the `.bench.ts` extension. See `benchmarks/example.bench.ts` for examples.
